@@ -251,6 +251,24 @@
 			      ```
 			    </textarea>
 			  </section>
+			  <section data-markdown>
+			    <textarea data-template>
+			      Hash Table
+			      ```lisp [2|4|5|7|9|11]
+			      ;;; Create a hash table
+			      (defparamter people (make-hash-table))
+			      ;;; Set the key as 100 and 101 and the values to person's name
+			      (setf (gethash '100 people) '(Thomas Field))
+			      (setf (gethash '101 people) '(Roger Over))
+			      ;;; Get the value stored in key 100
+			      (gethash '100 people)
+			      ;;; maphash executes a function on each item
+			      (maphash #'(lambda (k v) (format t "~a = ~a~%" k v)) people)
+			      ;;; Remove an item with the key
+			      (remhash '100 people)
+			      ```
+			    </textarea>
+			  </section>
 			</div>
 		</div>
 
