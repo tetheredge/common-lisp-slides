@@ -238,6 +238,19 @@
 			      ```
 			    </textarea>
 			  </section>
+			  <section data-markdown>
+			    <textarea data-template>
+			      Arrays
+			      ```lisp [2|4|6]
+			      ;;; Create an array with 3 empty items
+			      (defparameter names (make-array 3))
+			      ;;; Add a value to an array
+			      (setf (aref names 1) 'Thomas)
+			      ;;; Get the value by index
+			      (aref names 1)
+			      ```
+			    </textarea>
+			  </section>
 			</div>
 		</div>
 
