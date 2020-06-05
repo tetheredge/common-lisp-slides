@@ -87,7 +87,7 @@
 			  <section data-markdown>
 			    <textarea data-template>
 			      ### Defining a function
-			      <pre><code data-trim>
+			      <pre><code data-trim data-line-numbers="1|2-5">
 (defun get-car (car)
   (case car
     ('truck (print "You have a new truck"))
@@ -95,11 +95,11 @@
     (otherwise (print "You don't have a car at all"))))
 			      </code></pre>
 			      ```lisp [1|2-5]
-			      (defun get-car (car)
-			          (case car
-			              ('truck (print "You have a new truck"))
-			              ('sedan (print "You have a new sedan"))
-			              (otherwise (print "You don't have a car at all"))))
+(defun get-car (car)
+  (case car
+    ('truck (print "You have a new truck"))
+    ('sedan (print "You have a new sedan"))
+    (otherwise (print "You don't have a car at all"))))
 			      ```
 			    </textarea>
 			  </section>
