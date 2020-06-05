@@ -187,6 +187,41 @@
 			      ```
 			    </textarea>
 			  </section>
+			  <section data-markdown>
+			    <textarea data-template>
+			      ### Cons cell / Lists
+			    </textarea>
+			  </section>
+			  <section data-markdown>
+			    <textarea data-template>
+			      Consecutive Cell
+			      ```lisp
+			      '( + 5 4)
+			      ```
+			      Each piece of that list is held in a Cons Cell
+			      The cons cell is represented as
+			      [+] [5] [4] [nil] nil defines the end of a list
+			    </textarea>
+			  </section>
+			  <section data-markdown>
+			    <textarea data-template>
+			      Lists in action
+			      ```lisp [1|2|4]
+			      (cons 'fish 'cat)
+			      (list 'fish 'cat)
+			      ;;; Add an item to a list
+			      (cons 'dog '(fish cat))
+			      ;;; Get the first item out of a list with car
+			      (car '(dog fish cat))
+			      ;;; Get the second item out of a list with cdr
+			      (cdr '(dog fish cat))
+			      ;;; Get the third item out of a list with caddr
+			      (caddr '(dog fish cat))
+			      ;;; Get the fourth item out of a list with cadddr, max you can go
+			      (cadddr '(dog fish cat monkey))
+			      ```
+			    </textarea>
+			  </section>
 			</div>
 		</div>
 
