@@ -128,6 +128,20 @@
 			      ```
 			    </textarea>
 			  </section>
+			  <section data-markdown>
+			    <textarea data-template>
+			      Labels
+			      - Used when you want to have a function call itself
+			      - Call another local function inside a function
+			      ```lisp
+(labels ((double-it (num)
+  (* num 2))
+  (triple-it (num)
+    (* (double-it num) 3)))
+  (format t "Double &* Triple # = ~d~%" (triple-it 3)))
+			      ```
+			    </textarea>
+			  </section>
 			</div>
 		</div>
 
