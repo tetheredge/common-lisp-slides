@@ -156,6 +156,26 @@
 			      ```
 			    </textarea>
 			  </section>
+			  <section data-markdown>
+			    <textarea data-template>
+			      Higher Order Functions
+			      ```lisp
+(defun times-3 (x) (* 3 x))
+(defun times-4 (x) (* 4 x))
+;;; Pass in the function without attributes just like a variable
+(defun multiples (mult-func max-num)
+  ;; Cycle through all values up to the max that is supplied
+  (dotimes (x max-num)
+    ;; funcall is used when you know the number of arguments
+    (format t "~d : ~d~%" x (funcall mult-func x))))
+			      ```
+			      Call it like so
+			      ```lisp
+			      (multiples #'times-3 10)
+			      (multiples #'times-4 10)
+			      ```
+			    </textarea>
+			  </section>
 			</div>
 		</div>
 
