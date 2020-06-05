@@ -100,6 +100,28 @@
 			      ```
 			    </textarea>
 			  </section>
+			  <section data-markdown>
+			    <textarea data-template>
+			      ### Function with optional parameters
+			      ```lisp
+(defun print-list (w x &optional y z)
+  (format t "List = ~a ~%" (list w x y z)))
+			      ```
+			      ```lisp
+			      (print-list 1 2 3)
+			      ### Functions can receive multiple values with &rest
+			      ```lisp
+(defvar *total* 0)
+(defun sum (&rest nums)
+  (dolist (num nums)
+    (setf *total* (+ *total* num)))
+  (format t "Sum: ~a ~%" *total*))
+			      ```
+			      ```lisp
+			      (sum 1 2 3 4 5)
+			      ```
+			    </textarea>
+			  </section>
 			</div>
 		</div>
 
