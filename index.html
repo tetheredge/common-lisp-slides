@@ -142,6 +142,20 @@
 			      ```
 			    </textarea>
 			  </section>
+			  <section data-markdown>
+			    <textarea data-template>
+			      Returning multiple values from a function
+			      ```lisp
+(defun squares (num)
+  (values (expt num 2) (expt num 3)))
+			      ```
+			      Get multiple values from a function
+			      ```lisp
+(multiple-value-bind (a b) (squares 2)
+  (format t "2^2 = ~d 2^3 = ~d~%" a b))
+			      ```
+			    </textarea>
+			  </section>
 			</div>
 		</div>
 
