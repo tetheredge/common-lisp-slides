@@ -269,6 +269,25 @@
 			      ```
 			    </textarea>
 			  </section>
+			  <section data-markdown>
+			    <textarea data-template>
+			      Structures
+			      ```lisp
+;;; User defined data type with multiple different data types
+(defstruct customer name address id)
+;;; Store data in the struct
+(setq thomas (make-customer
+  :name "Thomas Field"
+  :address "1680 Rover LN"
+  :id 1))
+;;; Get a value stored
+(customer-name thomas)
+;;; Change a value in a struct
+(setf (customer-address thomas) "1681 Rover LN")
+(write thomas)
+			      ```
+			    </textarea>
+			  </section>
 			</div>
 		</div>
 
